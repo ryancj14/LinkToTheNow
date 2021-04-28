@@ -1,3 +1,8 @@
+### 
+
+`git status` - See if the current repository is a git repository and tell you which branch you are on, what commits you have made, and if you have any untracked files.
+`git init` - initialize the current repository as a git repository
+
 ### For This Wiki
 
 * After making any changes you are sure you want to keep:
@@ -48,11 +53,23 @@ git fetch antmicro
 git cherry-pick 5318926a9e87d7e7498b5d9b8435736277fcdd32
 ```
 ***
+
 If an error comes up that the project has unrelated histories, then you can use this, but make sure you pulling from the right spot. You may have to resolve any differences manually.
 ```
 git pull --allow-unrelated-histories
 ```
 ***
+
+## .gitignore file
+Whatever you assign in there will not be updated and saved in git and GitHub. Wildcards are encouraged for this.
+Ex:
+```
+*.elf
+```
+This will ignore any files ending with .elf (ex: main.elf or lab1.elf)
+
+***
+
 ## .gitconfig file
 ```
 # This is Git's per-user configuration file.

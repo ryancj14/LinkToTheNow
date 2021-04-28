@@ -66,6 +66,17 @@ This is how you move files between machines.
 
 ***
 
+SSH CONFIG
+You can create an SSH Config file in order to save SSH preferences. This file is located at ~/.ssh/config. Each entry in this file lists a remote machine that you can connect to by alias.
+
+For example, to connect to the CAEDM SSH server by only running ssh caedm you would add an entry to the file like this:
+
+```
+Host caedm
+    Hostname ssh.et.byu.edu
+    User cosmo
+```
+
 ### Errors
 
 1. When my ssh stopped working, I just deleted the .ssh folders in both my local and virtual machines and then restarted the keymaking and sharing process. And I'm happy to say that it worked!

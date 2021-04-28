@@ -236,5 +236,29 @@ control+z to stop the run
 
 `tail -f counter_arty.log &` or other filename to see the final lines as it runs.
 
+***
+
+See this for a quick cheat sheet:
+https://ryanstutorials.net/linuxtutorial/cheatsheet.php
+
+***
+
+```bash
+sudo apt install
+sudo apt update
+sudo apt upgrade
+```
+Some of the early commands you can run to get your computer up to date with the recent packages. Be careful running these however, as they may mess up something that works at the moment.
+
+***
+
+Here are some Linux tutorials that may be helpful:
+
+https://tldp.org/LDP/abs/html/index.html Advanced Bash Scripting Guide
+https://www.grymoire.com/Unix/ Tutorials on awk, sed, grep, make and find
+https://danielmiessler.com/study/vim/ Opinionated tutorial on vim
+https://stackoverflow.com/q/1218390/1220118#1220118 Making vim make sense
+https://blog.sanctum.geek.nz/unix-as-ide-introduction/ How to make Linux tools work together
+
 ----------------------------------
 Initially created by Ryan Johnson, June 2020.
