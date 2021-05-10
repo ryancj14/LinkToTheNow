@@ -58,6 +58,13 @@ If an error comes up that the project has unrelated histories, then you can use 
 ```
 git pull --allow-unrelated-histories
 ```
+
+***
+
+`git graph` -- like log. prints in a nice format git history
+
+`git bisect` -- Use binary search to find the commit that introduced a bug
+
 ***
 
 ## .gitignore file
@@ -109,11 +116,11 @@ So, what I usually do is the following:
 ***
 Can you also squash the commits of your branches and push force?
 This can be done by doing:
-1. git checkout <branch>
-1. git rebase -i <master-commit-hash>
+1. `git checkout <branch>`
+1. `git rebase -i <master-commit-hash>`
 2. Change the type of change you want to do to s for all the commits but the first
 3. Update the commit message
-4. git push --force origin <branch>
+4. `git push --force origin <branch>`
 
 ----------------------------------
 Initially created by Ryan Johnson, June 2020.

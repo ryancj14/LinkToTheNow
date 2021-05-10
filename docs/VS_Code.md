@@ -37,5 +37,27 @@ You can then write them anywhere and compile them, and if they are in the curren
 
 When you open up a file in VS Code that you don't want to be closed automatically, right click on the tab and click `Keep Open`. That was really helpful to learn because files just kept getting closed and replaced in the tab by new files I would open, which in that case I didn't want.
 
+***
+
+You can open a workspace, which basically means opening multiple folders instead of just one.
+
+***
+
+`ctrl + p` lets you search for a file in your directory.
+
+***
+
+F1 brings up a searchable drop-down of every command you can do in vs code.
+
+***
+
+`ctrl + space` brings up options
+
+`ctrl + shift + space` brings back up the function arguments
+
+***
+
+You can have two terminals going by pressing the slpit page button on the terminal.
+
 ----------------------------------
 Initially created by Ryan Johnson, June 2020.
