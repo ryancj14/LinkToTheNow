@@ -1,3 +1,15 @@
+Double underscore is called a dunder.
+
+Write with underscores, not camelCase.
+
+You can put underscores in your numbers just for readability.
+```
+>> 1_000_000_000
+1000000000
+```
+
+---
+
 #### Strings
 ```python
 astring = "Hello world!"
