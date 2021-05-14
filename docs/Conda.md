@@ -48,13 +48,11 @@ chmod a+x Miniconda3-latest-MacOSX-x86_64.sh
 ./Miniconda3-latest-MacOSX-x86_64.sh -p $CONDA_DIR -b -f
 ```
 #### *4*.
-Finally you may run all of the commands below. This is what fpga-tool-perf does upon installing conda, and it probably helps with the organization of the . I may look deeper into each of these later:
+Finally you may run all of the commands below. This is what fpga-tool-perf does upon installing conda, and it helps with organization, but is not necessary for conda to function:
 ```bash
 conda config --system --add envs_dirs $CONDA_DIR/envs
 conda config --system --add pkgs_dirs $CONDA_DIR/pkgs
-conda config --system --set always_yes yes
-conda config --system --set changeps1 no
-conda update -q conda
+conda update --quiet conda
 conda init bash
 ```
 Then restart your terminal (or `source ~/.bashrc` in Linux) and you are all set.
@@ -371,7 +369,7 @@ Executing transaction: done
 
 - `conda env export --name <env_name> > envname.yml` - Export an environment to a `yaml` file, that can be shared with other systems.
 
-The `YAML` file created when running this command on the `new` env looks like this:
+The `YAML` file created when running this command on the environment titled `new` looks like this:
 ```
 name: new
 channels:
@@ -381,7 +379,7 @@ dependencies:
   - openssl=1.1.1g=h1de35cc_0
 prefix: /Users/ryanjohnson/env/conda/envs/new
 ```
-It is a very simple file, that shows conda everything it needs to know to recreate the environment. `fpga-tool-perf` recreates the environment it needs by referencing a `yaml` file like this one. These files make it extremely easy for a group project to function, as everyone makes the exact same environment from the file, and thus can focus thier debugging on their own work, instead of the install process.
+It is a very simple file, that shows conda everything it needs to know to recreate the environment. `fpga-tool-perf` recreates the environment it needs by referencing a `yaml` file like this one. These files make it extremely easy for a group project to function, as everyone makes the exact same environment from the file, and thus can focus their debugging on their own work, instead of the install process.
 
 - `conda env create --file envname.yml` - Create an environment from a `yaml` file.
 
@@ -434,7 +432,7 @@ To use pip within a conda environment, you need to install it:
 ```
 conda install pip
 ```
-Then you can use `pip install` to install any packages not available in conda. Essentialy, it's fully recommended to use pip inside of conda. It's better to install using conda, but for any packages that don't have a conda build, it's perfectly acceptable to use pip.
+Then you can use `pip install` to install any packages not available in conda. Essentialy, it's not wrong to use pip inside of conda. It's better to install using conda, but for any packages that don't have a conda build, it's perfectly acceptable to use pip.
 
 ***
 
