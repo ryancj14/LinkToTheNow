@@ -547,5 +547,11 @@ funct(1)(2)
 ```
 In the above example `funct(1)`, a function with `1` as an argument, **returns** a certain function which is then called with `2` as its argument. So yes, pretty interesting.
 
+---
+
+### Python Unit Tests
+
+
+
 ----------------------------------
 Initially created by Ryan Johnson, July 2020.

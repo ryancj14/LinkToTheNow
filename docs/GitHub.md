@@ -41,11 +41,11 @@ A few useful commands:
 Instructions for updating your forked repo branch with the most recent master from the main repository and rebasing branches, using symbiflow's fpga-tool-perf as an example:
 1. `git remote add symbiflow https://github.com/SymbiFlow/fpga-tool-perf.git` (first time only -- adds symbiflow as a named reference from which you can pull)
 2. `git fetch symbiflow` (Updates symbiflow to its current state)
-3. `git checkout master` 
-4. `git pull symbiflow master` (Updates your master with symbiflow's current master)
-5. `git push origin master` (Gives your forked repo the updated master)
+3. `git checkout main` 
+4. `git pull symbiflow main` (Updates your master with symbiflow's current master)
+5. `git push origin main` (Gives your forked repo the updated master)
 6. `git checkout <branch>`
-7. `git rebase master` (if there are conflicts, resolve them, stage the previously conflicting files, and `git rebase --continue`)
+7. `git rebase main` (if there are conflicts, resolve them, stage the previously conflicting files, and `git rebase --continue`)
 8. `git push --force origin <branch>` (Forces the forked repo to accept the updated branch)
 
 Repeat steps 6-8 for each branch that needs to be updated. 
@@ -67,7 +67,7 @@ This goes through each python file and standardizes it. Thus, you will want to r
 
 Instructions for squashing multiple commits into one:
 1. `git checkout <branch>`
-2. `git rebase -i <master-commit-hash>`
+2. `git rebase -i <maing-commit-hash>`
 3. Change the type of change you want to do to `s` (short for squash) for all the commits but the first (the one at the top -- keep that one as `pick`)
 4. Update the commit message (to briefly summarize all changes) and then save.
 5. `git push --force origin <branch>`
